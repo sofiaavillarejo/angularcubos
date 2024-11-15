@@ -1,0 +1,15 @@
+<div>
+  <h1>Cubos de la marca <span style="color: red;">{{marca}}</span></h1>
+  <hr/>
+  @for (cubo of cubos; track cubo) {
+    <div [ngStyle]="{float: 'left'}" class="card" style="width: 18rem;">
+      <img class="card-img-top" src={{cubo.imagen}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{cubo.nombre}}</h5>
+        <p class="card-text">Precio: {{cubo.precio}} €</p>
+        <p class="card-text">Valoración: {{cubo.valoracion}}</p>
+        <a class="btn btn-primary w-100" [routerLink]="['/detalles/' + cubo.idCubo]">Detalles</a>
+      </div>
+    </div>
+  }
+</div>

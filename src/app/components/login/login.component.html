@@ -1,0 +1,11 @@
+<div>
+  <h1>Iniciar Sesión</h1>
+  <hr>
+    <form class="form" #loginForm="ngForm" (submit)="login()">
+      <label class="form-label">Email</label>
+      <input class="form-control" type="text" name="cajaemail" #cajaemail /><br/>
+      <label class="form-label">Contraseña</label>
+      <input class="form-control" type="text" name="cajacont" #cajacont/><br/>
+      <button class="btn btn-primary w-100">Iniciar Sesión</button>
+    </form>
+</div>

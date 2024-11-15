@@ -1,0 +1,12 @@
+<div>
+  <h1>Realizar Pedido</h1>
+  <hr>
+  <form class="form" (ngSubmit)="comprar()">
+    <label class="form-label" >Elige un cubo</label>
+    <select class="form-select" name="selectCubos" #selectCubos>
+      <option value="" disabled selected>Seleccione una opción</option>
+      <option *ngFor="let cubo of cubos" value="{{cubo.idCubo}}">{{cubo.nombre}}</option>    
+      </select>
+    <button class="btn btn-primary w-100 mt-3">Comprar Cubo</button>
+  </form>
+</div>
